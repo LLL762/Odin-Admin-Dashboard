@@ -88,34 +88,38 @@ nav svg {
 }
 
 header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0 1em;
   padding: 0.8em;
+  max-width: 100%;
 }
-header > * {
-  flex: 1 1 300px;
+
+.search-notification {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  gap: 1em;
 }
 
 header .search-bar {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5em;
+  flex: 1 1 50%;
 }
 
 input[type="search"] {
+  flex: 1 1 15em;
   background-color: var(--main-background-color);
   border-radius: 0.8em;
   text-indent: 0.4em;
   padding: 0.4em;
-  width: 20em;
+  max-width: max(30em, 70%);
 }
 
 .notification {
   font-size: larger;
   display: flex;
+  justify-content: right;
   align-items: center;
   gap: 0.8em;
 }
@@ -126,6 +130,14 @@ input[type="search"] {
 
 .notification > .avatar {
   height: 2.5em;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .hello {
