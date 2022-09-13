@@ -1,12 +1,4 @@
-:root {
-  --nav-background-color: #4a8ad3;
-  --nav-text-color: white;
-  --main-background-color: #e3e7f0;
-  --content-background-color: white;
-  --project-font-color: grey;
-  --default-font-color: black;
-  --max-main-max-width: 1600px;
-}
+@import url(/style/global-var.css);
 
 * {
   box-sizing: border-box;
@@ -14,6 +6,7 @@
 
 body {
   color: var(--default-font-color);
+  margin: 0;
 }
 
 svg {
@@ -38,8 +31,8 @@ input {
 }
 
 .main-container {
-  min-width: 300px;
-  max-width: var(--max-main-max-width);
+  min-width: var(--main-min-width);
+  max-width: var(--main-max-width);
   margin: auto;
 }
 
@@ -90,6 +83,10 @@ nav svg {
 header {
   padding: 0.8em;
   max-width: 100%;
+  margin: auto;
+}
+
+header > * {
 }
 
 .search-notification {
@@ -144,6 +141,11 @@ input[type="search"] {
   display: flex;
   align-items: center;
   font-weight: bold;
+  max-width: 100%;
+}
+
+.break-word {
+  display: inline-block;
 }
 
 .hello strong {
@@ -151,13 +153,16 @@ input[type="search"] {
 }
 
 .hello > .avatar {
-  height: 60%;
+  flex: 1 1 10%;
+  height: auto;
+  min-width: 4.5em;
 }
 
 header .btn-bar {
   display: flex;
   align-items: center;
   gap: 1em;
+  max-width: 100%;
 }
 
 header .btn-bar > button {
@@ -170,10 +175,16 @@ header .btn-bar > button {
   width: 6em;
 }
 
-main {
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
   background-color: var(--main-background-color);
+}
+
+main {
+  flex: 1 0 70%;
   padding: 0.5em;
-  padding-left: 1.8em;
 }
 
 .projects-grid {
@@ -210,13 +221,24 @@ main {
 }
 
 aside {
+  flex: 1 1 15%;
   display: flex;
   flex-direction: column;
+  align-items: left;
+  min-width: max(10%, 250px);
+  padding: 1rem;
 }
 
 aside p {
   font-size: small;
   color: var(--project-font-color);
+}
+
+aside > * > *:not(:first-child) {
+  flex: 1 1 90%;
+  background-color: var(--content-background-color);
+  border-radius: 5px;
+  padding: 1em;
 }
 
 .announcements-content {
@@ -225,10 +247,6 @@ aside p {
 
 .announcements-content *:not(:first-child) {
   border-top: 1px solid rgb(196, 194, 194);
-}
-
-.trending {
-  padding: 1em;
 }
 
 .trending-item {
