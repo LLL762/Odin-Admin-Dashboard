@@ -1,0 +1,45 @@
+nav {
+  --nav-background-color: #4a8ad;
+  --nav-text-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: #4a8ad3;
+  color: var(--nav-text-color);
+  padding: 0.8em;
+}
+
+.nav-header {
+  display: flex;
+  font-size: larger;
+  align-items: center;
+  gap: 0.5em;
+  margin-left: 0.5em;
+}
+
+.menu-bar,
+.settings {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+}
+
+nav svg {
+  height: 1.2em;
+  fill: var(--nav-text-color);
+}
+
+.nav-header > svg {
+  height: 1.8em;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: -0.5em;
+}
+
+svg {
+  height: 1em;
+}
