@@ -38,6 +38,7 @@ input[type="search"] {
 
 .notification > svg {
   height: 1.2em;
+  animation: 0.8s 1s linear infinite alternate ringing-bell;
 }
 
 .notification > .avatar {
@@ -88,4 +89,14 @@ header .btn-bar > button {
   padding: 0.5em;
   border-radius: 1em;
   width: 6em;
+}
+
+@keyframes ringing-bell {
+  from {
+    transform: rotateZ(-8deg);
+  }
+
+  to {
+    transform: rotateZ(8deg);
+  }
 }

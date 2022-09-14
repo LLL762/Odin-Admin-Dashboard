@@ -3,10 +3,13 @@
   padding: 0.5em;
   background-color: var(--bg-color-secondary);
   border-radius: 10px;
-  top: 25%;
-  left: 1%;
+  top: calc(min(15%, 150px));
   opacity: 0.9;
   z-index: 1;
+  max-height: 3em;
+  max-width: 3em;
+  transition: max-width ease-out 1s, max-height ease-out 1s, opacity ease-out 1s;
+  overflow: hidden;
 }
 
 .nav-wrapper > svg {
@@ -15,19 +18,17 @@
 }
 .nav-wrapper:focus {
   outline: 2px solid rgb(166, 197, 27);
-  transform: scale(1.05);
-}
-
-.nav-wrapper:hover > nav {
-  display: flex;
 }
 
 .nav-wrapper:hover {
   opacity: 1;
+  max-height: 100%;
+  max-width: 100%;
+  transition: max-width ease-in 1.5s, max-height ease-in 1.5s;
 }
 
 nav {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 1em;
   color: var(--text-color-secondary);
