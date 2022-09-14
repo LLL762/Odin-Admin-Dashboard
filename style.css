@@ -36,15 +36,28 @@ input {
   margin: auto;
 }
 
-.show-nav:hover + nav {
+.nav-wrapper {
+  position: fixed;
+  padding: 0.5em;
+  background-color: var(--nav-background-color);
+  border-radius: 10px;
+  top: 0.25%;
+  left: 0.25%;
+}
+
+.nav-wrapper > svg {
+  height: 2em;
+  fill: var(--nav-text-color);
+}
+
+.nav-wrapper:hover > nav {
   display: flex;
 }
 
 nav {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 1em;
-  background-color: var(--nav-background-color);
   color: var(--nav-text-color);
   padding: 0.8em;
 }
@@ -84,9 +97,6 @@ header {
   padding: 0.8em;
   max-width: 100%;
   margin: auto;
-}
-
-header > * {
 }
 
 .search-notification {
