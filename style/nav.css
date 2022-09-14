@@ -8,7 +8,7 @@
   z-index: 1;
   max-height: 3em;
   max-width: 3em;
-  transition: max-height ease-out 1s, max-width ease-out 1s, opacity ease-out 1s;
+  transition: max-height ease-out 1s, opacity ease-out 1s, max-width ease-out 1s;
   overflow: hidden;
 }
 
@@ -22,9 +22,9 @@
 
 .nav-wrapper:hover {
   opacity: 1;
-  max-height: 100%;
   max-width: 100%;
-  transition: max-width ease-in 1.5s, max-height ease-in 1.5s;
+  max-height: 100%;
+  transition: max-width ease-in 1s, max-height ease-in 1.5s;
 }
 
 nav {
@@ -50,6 +50,7 @@ nav {
 }
 
 nav svg {
+  flex: 0 0 1.2em;
   height: 1.2em;
   fill: var(--text-color-secondary);
 }
