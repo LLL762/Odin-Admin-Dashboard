@@ -1,0 +1,91 @@
+header {
+  padding: 0.8em;
+  max-width: 100%;
+  margin: auto;
+}
+
+.search-notification {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+
+header .search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  flex: 1 1 50%;
+}
+
+input[type="search"] {
+  flex: 1 1 15em;
+  background-color: var(--bg-color-primary);
+  border-radius: 0.8em;
+  text-indent: 0.4em;
+  padding: 0.4em;
+  max-width: max(30em, 70%);
+}
+
+.notification {
+  font-size: larger;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 0.8em;
+}
+
+.notification > svg {
+  height: 1.2em;
+}
+
+.notification > .avatar {
+  height: 2.5em;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hello {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  max-width: 100%;
+}
+
+.break-word {
+  display: inline-block;
+}
+
+.hello strong {
+  font-size: x-large;
+}
+
+.hello > .avatar {
+  flex: 1 1 10%;
+  height: auto;
+  min-width: 4.5em;
+}
+
+header .btn-bar {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  max-width: 100%;
+}
+
+header .btn-bar > button {
+  border: inherit;
+  font-size: 1.05rem;
+  background-color: var(--bg-color-secondary);
+  color: var(--text-color-secondary);
+  padding: 0.5em;
+  border-radius: 1em;
+  width: 6em;
+}

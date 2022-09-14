@@ -1,11 +1,36 @@
-nav {
-  --nav-background-color: #4a8ad;
-  --nav-text-color: white;
+.nav-wrapper {
+  position: fixed;
+  padding: 0.5em;
+  background-color: var(--bg-color-secondary);
+  border-radius: 10px;
+  top: 25%;
+  left: 1%;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.nav-wrapper > svg {
+  height: 2em;
+  fill: var(--text-color-secondary);
+}
+.nav-wrapper:focus {
+  outline: 2px solid rgb(166, 197, 27);
+  transform: scale(1.05);
+}
+
+.nav-wrapper:hover > nav {
   display: flex;
+}
+
+.nav-wrapper:hover {
+  opacity: 1;
+}
+
+nav {
+  display: none;
   flex-direction: column;
   gap: 1em;
-  background-color: #4a8ad3;
-  color: var(--nav-text-color);
+  color: var(--text-color-secondary);
   padding: 0.8em;
 }
 
@@ -14,19 +39,18 @@ nav {
   font-size: larger;
   align-items: center;
   gap: 0.5em;
-  margin-left: 0.5em;
 }
 
 .menu-bar,
 .settings {
   display: flex;
   flex-direction: column;
-  margin-left: 1em;
+  width: 100%;
 }
 
 nav svg {
   height: 1.2em;
-  fill: var(--nav-text-color);
+  fill: var(--text-color-secondary);
 }
 
 .nav-header > svg {
@@ -38,8 +62,12 @@ nav svg {
   align-items: center;
   gap: 0.5em;
   margin-bottom: -0.5em;
+  cursor: pointer;
+  padding: 0.2em;
+  border-radius: 10px;
 }
 
-svg {
-  height: 1em;
+.menu-item:hover {
+  transform: scale(1.02);
+  background-color: var(--bg-color-secondary-lighter);
 }

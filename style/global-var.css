@@ -1,10 +1,13 @@
 :root {
-  --nav-background-color: #4a8ad3;
-  --nav-text-color: white;
-  --main-background-color: #e3e7f0;
-  --content-background-color: white;
-  --project-font-color: grey;
-  --default-font-color: black;
+  --bg-color-primary: #e3e7f0;
+  --bg-color-secondary: #4a8ad3;
+  --bg-color-secondary-lighter: #7fa6d3;
+  --bg-color-content: white;
+
+  --text-color-primary: black;
+  --text-color-primary-lighter: grey;
+  --text-color-secondary: white;
+
   --main-max-width: 1800px;
   --main-min-width: 320px;
 }

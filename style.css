@@ -1,4 +1,7 @@
 @import url(/style/global-var.css);
+@import url(/style/nav.css);
+@import url(/style/header.css);
+@import url(/style/aside.css);
 
 * {
   box-sizing: border-box;
@@ -13,13 +16,18 @@ svg {
   height: 1.5em;
 }
 
+button[type="button"]:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 .avatar {
   height: 2em;
 }
 
 .project-item strong,
 aside strong {
-  color: var(--default-font-color);
+  color: var(--text-color-primary);
   font-size: 1.15em;
   line-height: 1.5em;
 }
@@ -36,160 +44,11 @@ input {
   margin: auto;
 }
 
-.nav-wrapper {
-  position: fixed;
-  padding: 0.5em;
-  background-color: var(--nav-background-color);
-  border-radius: 10px;
-  top: 0.25%;
-  left: 0.25%;
-}
-
-.nav-wrapper > svg {
-  height: 2em;
-  fill: var(--nav-text-color);
-}
-
-.nav-wrapper:hover > nav {
-  display: flex;
-}
-
-nav {
-  display: none;
-  flex-direction: column;
-  gap: 1em;
-  color: var(--nav-text-color);
-  padding: 0.8em;
-}
-
-.nav-header {
-  display: flex;
-  font-size: larger;
-  align-items: center;
-  gap: 0.5em;
-  margin-left: 0.5em;
-}
-
-.menu-bar,
-.settings {
-  display: flex;
-  flex-direction: column;
-  margin-left: 1em;
-}
-
-nav svg {
-  height: 1.2em;
-  fill: var(--nav-text-color);
-}
-
-.nav-header > svg {
-  height: 1.8em;
-}
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  margin-bottom: -0.5em;
-}
-
-header {
-  padding: 0.8em;
-  max-width: 100%;
-  margin: auto;
-}
-
-.search-notification {
-  display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: space-evenly;
-  gap: 1em;
-}
-
-header .search-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5em;
-  flex: 1 1 50%;
-}
-
-input[type="search"] {
-  flex: 1 1 15em;
-  background-color: var(--main-background-color);
-  border-radius: 0.8em;
-  text-indent: 0.4em;
-  padding: 0.4em;
-  max-width: max(30em, 70%);
-}
-
-.notification {
-  font-size: larger;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  gap: 0.8em;
-}
-
-.notification > svg {
-  height: 1.2em;
-}
-
-.notification > .avatar {
-  height: 2.5em;
-}
-
-.header-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.hello {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  max-width: 100%;
-}
-
-.break-word {
-  display: inline-block;
-}
-
-.hello strong {
-  font-size: x-large;
-}
-
-.hello > .avatar {
-  flex: 1 1 10%;
-  height: auto;
-  min-width: 4.5em;
-}
-
-header .btn-bar {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  max-width: 100%;
-}
-
-header .btn-bar > button {
-  border: inherit;
-  font-size: 1.05rem;
-  background-color: var(--nav-background-color);
-  color: var(--nav-text-color);
-  padding: 0.5em;
-  border-radius: 1em;
-  width: 6em;
-}
-
 .main-content {
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
-  background-color: var(--main-background-color);
+  background-color: var(--bg-color-primary);
 }
 
 main {
@@ -208,15 +67,20 @@ main {
 .project-item {
   display: flex;
   flex-direction: column;
-  background-color: var(--content-background-color);
+  background-color: var(--bg-color-content);
   border-left: #fbc009 6px solid;
   border-radius: 8px;
   box-shadow: 1px 1px 4px rgb(63, 62, 62);
   justify-content: space-between;
+  cursor: pointer;
+}
+
+.project-item:hover {
+  transform: scale(1.02);
 }
 
 .project-item > p {
-  color: var(--project-font-color);
+  color: var(--text-color-primary-lighter);
   margin-top: 8%;
   margin-left: 5%;
   margin-right: 20%;
@@ -230,41 +94,7 @@ main {
   margin-right: 8%;
 }
 
-aside {
-  flex: 1 1 15%;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  min-width: max(10%, 250px);
-  padding: 1rem;
-}
-
-aside p {
-  font-size: small;
-  color: var(--project-font-color);
-}
-
-aside > * > *:not(:first-child) {
-  flex: 1 1 90%;
-  background-color: var(--content-background-color);
-  border-radius: 5px;
-  padding: 1em;
-}
-
-.announcements-content {
-  padding: 1em;
-}
-
-.announcements-content *:not(:first-child) {
-  border-top: 1px solid rgb(196, 194, 194);
-}
-
-.trending-item {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
-
-.trending-item > .avatar {
-  height: 2.5em;
+.icon-bar > svg:hover {
+  background-color: var(--bg-color-primary);
+  cursor: pointer;
 }
